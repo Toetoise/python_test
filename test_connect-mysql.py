@@ -13,8 +13,8 @@ db = pymysql.connect(
 cursor = db.cursor()
 
 # 使用execute()方法执行SQL查询
-cursor.execute("SELECT VERSION()")
+cursor.execute("CREATE INDEX idex_user_id_unit_id_type ON sq_user_third_party_notice (user_id,unit_id,type)")
 data = cursor.fetchone()
-print("Database version : %s " % data)
+# print("Database version : %s " % data)
 
 db.close()

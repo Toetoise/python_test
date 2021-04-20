@@ -41,7 +41,7 @@ class TestVisitMsykByEdge(unittest.TestCase):
         print("上传完成")
         f.close()
 
-    def tearDown(self):
+    def tearDownClass(self):
         self.driver.quit()
 
 
